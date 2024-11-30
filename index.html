@@ -1,0 +1,80 @@
+<!--CODE NAMIN TO FOR MOR-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart LoBo Training Kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="Image" href="IMAGES/ICON.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="IMAGES/LOGO.png" alt="Logo"></a>
+        <div class="nav-links-a" id="navLinks">
+            <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="specs.html">SPECIFICATION</a></li>
+                <li><a href="documentation.html">DOCUMENTATION</a></li>
+                <li><a href="researchers.html">ABOUT THE RESEARCHERS</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="text-box">
+        <h1>Smart LoBo Training Kit</h1>
+        <p>Hands-on IoT-Based Logic Board Training Kit for ECE Students at the <br> 
+            University of Rizal System - Morong Campus</p>
+        <a href="TRAINING MODULE.pdf" target="_blank" class="lm-btn">Learning Module</a>
+        <a href="javascript:void(0);" class="lm-btn" onclick="showModal()">Video Demonstration</a>
+    </div>
+
+</section>
+
+<!-- Modal Container -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video width="100%" controls>
+            <source src="Smart LoBo Traning Kit.mp4" type="video/mp4"> .
+        </video>
+    </div>
+</div>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    var videoModal = document.getElementById("videoModal");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+    function showModal() {
+        videoModal.style.display = "block";
+        var video = videoModal.querySelector("video");
+        video.play(); 
+    }
+    function closeModal() {
+        videoModal.style.display = "none";
+        var video = videoModal.querySelector("video");
+        video.pause(); 
+        video.currentTime = 0; 
+    }
+    window.onclick = function(event) {
+        if (event.target == videoModal) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>

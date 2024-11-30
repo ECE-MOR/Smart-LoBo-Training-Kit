@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About the Researchers</title>
+        <link rel="stylesheet" href="researchers.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" type="Image" href="IMAGES/ICON.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+            <a href="index.html"><img src="IMAGES/LOGO.png" alt="Smart LoBo Logo"></a>
+            <div class="nav-links-a" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="specs.html">SPECIFICATION</a></li>
+                    <li><a href="documentation.html">DOCUMENTATION</a></li>
+                    <li><a href="researchers.html">ABOUT THE RESEARCHERS</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+           </nav>
+        <div class="container" id="officer">
+            <section class="officers">
+                <h1 data-aos="fade-up">Meet the Researchers</h1>
+                <h3 data-aos="fade-up">This team of talented students and profesionnal worked together to bring the Smart LoBo Training Kit to life, focusing on creating an interactive and innovative learning experience for ECE students.</h3>
+            </section>
+
+            <section class="pfp">
+                <h2 data-aos="fade-up">Researchers' Profiles</h2>
+            </section>
+
+            <!-- Adviser -->
+            <div data-aos="fade-up">
+                <div class="profile-card" onClick="window.location.href='https://www.facebook.com/jen.deleon3'">
+                    <img src="IMAGES/jenadel.jpg" alt="Engr. Jenadel DL. Antipolo">
+                    <h2>Engr. Jenadel DL. Antipolo</h2>
+                    <p>Position: Team Adviser</p>
+                    <p>Bio: Engr. Antipolo specializes in teaching electronic communication system. She is the adviser of the team and supports the project to develop the Smart LoBo Training Kit.</p>
+                </div>
+            </div>
+
+            <!-- Ashers -->
+            <div data-aos="fade-up">
+                <div class="profile-card" onClick="window.location.href='https://www.facebook.com/AshantyMadelineCruz'">
+                    <img src="IMAGES/ashers.jpg" alt="Ashanty Madeline DC. Cruz">
+                    <h2>Ashanty Madeline DC. Cruz</h2>
+                    <p>Position: Team Leader</p>
+                    <p>Bio: Cruz is a scholar, a quizzer, and soon-to-be licensed ECE professional. She is the team leader and led the project in developing the Smart LoBo Training Kit.</p>
+                </div>
+            </div>
+
+            <!-- Bry -->
+            <div data-aos="fade-up">
+                <div class="profile-card" onClick="window.location.href='https://www.facebook.com/brianezekiel.batalon.7/'">
+                    <img src="IMAGES/bry.jpg" alt="Brian Ezekiel D. Batalon">
+                    <h2>Brian Ezekiel D. Batalon</h2>
+                    <p>Position: Team Member</p>
+                    <p>Bio: Batalon is a sound technician and soon-to-be licensed ECE & ECT professional. He helped in developing the software and embedded system for the Smart LoBo Training Kit.</p>
+                </div>
+            </div>
+
+            <!-- jayson -->
+            <div data-aos="fade-up">
+                <div class="profile-card" onClick="window.location.href='https://www.facebook.com/jaysonvillacura0207'">
+                    <img src="IMAGES/jeson.jpg" alt="Mark Jayson F. Villacura">
+                    <h2>Mark Jayson F. Villacura</h2>
+                    <p>Position: Team Member</p>
+                    <p>Bio: Villacura is a talented student and soon-to-be licensed ECE professional. He helped in designing the project Smart LoBo Training Kit, making it presentable to the users.</p>
+                </div>
+            </div>
+
+            <!-- tan -->
+            <div data-aos="fade-up">
+                <div class="profile-card" onClick="window.location.href='https://www.facebook.com/tristanmanuel.stotomas'">
+                    <img src="IMAGES/tan.jpg" alt="Tristan Manuel T. Sto. Tomas">
+                    <h2>Tristan Manuel T. Sto. Tomas</h2>
+                    <p>Position: Team Member</p>
+                    <p>Bio: Sto. Tomas is an outstanding student and soon-to-be licensed ECE professional. He helped in designing and developing the the project Smart LoBo Training Kit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Same JavaScript for Menu Toggle -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>

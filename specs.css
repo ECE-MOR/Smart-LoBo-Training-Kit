@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.header {
+    min-height: 110vh;
+    width: 100%;
+    background-image: url(IMAGES/BG2.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 500px;
+}
+
+.nav-links-a {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links-a ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links-a ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-links-a ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: darkslateblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.nav-links-a ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 50px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 30px;
+    color: black;
+}
+
+.specs-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.specs-table th, .specs-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.specs-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.specs-table td {
+    background-color: #f9f9f9;
+}
+
+.specs-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.specs-table tr:hover {
+    background-color: #d9d9d9;
+}
+
+.lm-btn {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+}
+
+.lm-btn:hover {
+    border: 1px solid darkslateblue;
+    background: darkslateblue;
+    transition: 1s;
+    color: aliceblue;
+}
+
+
+nav .fa-solid {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .header {
+        min-height: 160vh;
+    }
+
+    nav img {
+        width: 300px;
+        bottom: 30px;
+    }
+
+    .text-box p {
+        font-size: 18px;
+        margin-top: 350px;  
+    }
+
+    .nav-links-a ul li {
+        display: block;
+    }
+
+
+    .nav-links-a {
+        position: fixed;
+        background: whitesmoke;
+        height: 100vh;
+        width: 120px; 
+        top: 0;
+        right: -200px; 
+        text-align: left;
+        z-index: 10; 
+        transition: 0.8s ease-in-out;
+        padding-top: 60px;
+        padding-left: 20px;
+    }
+
+    
+    .nav-links-a.active {
+        right: 0; 
+    }
+
+    .nav-links-a ul li::after {
+        display: none;
+    }
+
+    
+    nav .fa-solid {
+        display: block;
+        color: darkslateblue;
+        margin: -5px;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 20; 
+    }
+
+    
+    body.menu-active {
+        padding-right: 240px; 
+    }
+
+    .nav-links-a {
+        padding: 40px;
+    }
+
+    
+    .specs-table {
+        width: 90%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-top: 30px;
+    }
+}

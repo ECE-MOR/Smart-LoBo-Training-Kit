@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Specifications - Smart LoBo Training Kit</title>
+        <link rel="stylesheet" href="specs.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" type="Image" href="IMAGES/ICON.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Navigation Section -->
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="IMAGES/LOGO.png" alt="Smart LoBo Logo"></a>
+                <div class="nav-links-a" id="navLinks">
+                    <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="specs.html">SPECIFICATION</a></li>
+                        <li><a href="documentation.html">DOCUMENTATION</a></li>
+                        <li><a href="researchers.html">ABOUT THE RESEARCHERS</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+
+        <!-- Specifications Section -->
+        <section class="text-box">
+            <p>The Smart LoBo Training Kit is designed with the following specifications:</p>
+            <!-- Specifications Table -->
+            <table class="specs-table">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Microcontroller</td>
+                    <td>ESP32, ESP8266</td>
+                </tr>
+                <tr>
+                    <td>Operating Voltage</td>
+                    <td>5V-12V</td>
+                </tr>
+                <tr>
+                    <td>Communication Protocols</td>
+                    <td>WiFi</td>
+                </tr>
+                <tr>
+                    <td>Power Supply</td>
+                    <td>9V 2A (Negative Center, Positive Outer)</td>
+                </tr>
+                <tr>
+                    <td>Display</td>
+                    <td>20x4 LCD with I2C</td>
+                </tr>
+                <tr>
+                    <td>Buttons</td>
+                    <td>3 push buttons(Enter, Option, Back)</td>
+                </tr>
+                <tr>
+                    <td>Input Switches</td>
+                    <td>5 SPDT Switch(HIGH(1), LOW(0))</td>
+                </tr>
+                <tr>
+                    <td>Mode Switch</td>
+                    <td>1 (Training Mode, IoT Mode)</td>
+                </tr>
+                <tr>
+                    <td>Segment Display</td>
+                    <td>1 inch 7-Segment Display Common Cathode</td>
+                </tr>
+                <tr>
+                    <td>Connectors</td>
+                    <td>JST XH2.54 (10cm, 20cm)</td>
+                </tr>
+                <tr>
+                    <td>Logic Gates ICs</td>
+                    <td>Not (7402), AND (7408), OR (7432), NAND (7400), NOR (7402), EX-OR (7486), EX-NOR (4077)</td>
+                </tr>
+                <tr>
+                    <td>Binary Coded Decimal IC</td>
+                    <td>CD4511</td>
+                </tr>
+                <tr>
+                    <td>Foldable</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Handle</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Lock</td>
+                    <td>2 Latch</td>
+                </tr>
+                <tr>
+                    <td>Magnetic</td>
+                    <td>Yes</td>
+                </tr>
+                <!-- Add more specifications here -->
+            </table>
+            <a href="Smart Lobo User Manual.pdf" target="_blank" class="lm-btn">User Manual</a>
+        </section>
+
+        <!-- Same JavaScript as index.html -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        
+    </body>
+</html>

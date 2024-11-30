@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Schematics</title>
+        <link rel="stylesheet" href="documentation.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" type="image/png" href="IMAGES/ICON.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <section class="header">
+           <nav>
+                <a href="index.html"><img src="IMAGES/LOGO.png" alt="Smart LoBo Logo"></a>
+                <div class="nav-links-a" id="navLinks">
+                    <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="specs.html">SPECIFICATION</a></li>
+                        <li><a href="documentation.html">DOCUMENTATION</a></li>
+                        <li><a href="researchers.html">ABOUT THE RESEARCHERS</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+           </nav>
+
+        <section class="text-box">
+            <h1>Team Smart LoBo</h1>
+            <p>The final defense for Methods of Research Project was held last November 19, 2024 at the University of Rizal System - Morong Campus</p>
+        </section>
+
+        <div class="schematics-container">
+            <div class="schematic">
+                <h2>3D Model</h2>
+                <img src="IMAGES/3D.png" alt="Schematic 1" class="schematic-img hoverable" onclick="showModal('IMAGES/3D.png')">
+            </div>
+            <div class="schematic">
+                <h2>Final Defense</h2>
+                <img src="IMAGES/final.jpg" alt="Schematic 2" class="schematic-img hoverable" onclick="showModal('IMAGES/final.jpg')">
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="fullImage">
+        </div>
+
+        <script>
+            const navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        <script>
+            function showModal(imageSrc) {
+                const modal = document.getElementById("imageModal");
+                const fullImage = document.getElementById("fullImage");
+                fullImage.src = imageSrc;
+                modal.style.display = "block";
+            }
+            function closeModal() {
+                const modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
